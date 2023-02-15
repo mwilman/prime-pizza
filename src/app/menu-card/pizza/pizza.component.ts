@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./pizza.component.scss']
 })
 export class PizzaComponent {
+  comment: string = "";
 
 }

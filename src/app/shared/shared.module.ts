@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './button/button.component';
 import { TextfieldComponent } from './textfield/textfield.component';
+import {FormsModule} from "@angular/forms";
+import {InputTextModule} from "primeng/inputtext";
+import {ButtonModule} from "primeng/button";
 
 
 
@@ -10,8 +13,15 @@ import { TextfieldComponent } from './textfield/textfield.component';
     ButtonComponent,
     TextfieldComponent,
   ],
+  exports: [
+    TextfieldComponent,
+    ButtonComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    InputTextModule,
+    ButtonModule
   ]
 })
 export class SharedModule { }
