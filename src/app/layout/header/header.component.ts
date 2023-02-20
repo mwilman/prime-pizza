@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MenuItem} from "primeng/api";
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-
+  items: MenuItem[]=[];
+  ngOnInit() {
+    this.items = [
+      {label: 'Home', icon: 'pi pi-fw pi-home', routerLink: 'home'},
+      {label: 'Pizza', routerLink: 'pizza'},
+      {label: 'Pasta', routerLink: 'pasta'}
+      /*
+      {label: 'Calendar', icon: 'pi pi-fw pi-calendar'},
+      {label: 'Edit', icon: 'pi pi-fw pi-pencil'},
+      {label: 'Documentation', icon: 'pi pi-fw pi-file'},
+      {label: 'Settings', icon: 'pi pi-fw pi-cog'}
+       */
+    ];
+  }
 }
