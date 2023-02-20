@@ -9,6 +9,7 @@ import {ProductService} from "../product.service";
 })
 export class PizzaComponent {
   products: Product[] =  [];
+  selectedProduct: Product[] = [];
 
   constructor(private productService: ProductService) { }
 
@@ -18,4 +19,13 @@ export class PizzaComponent {
     );
   }
 
+  selectProduct(product: Product) {
+    console.log(product.description);
+    //this.messageService.add({severity:'info', summary:'Product Selected', detail: product.name});
+  }
+
+  onRowSelect(event: any) {
+    console.log(event.data.description);
+    //this.messageService.add({severity:'info', summary:'Product Selected', detail: event.data.name});
+  }
 }
