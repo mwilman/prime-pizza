@@ -1,22 +1,21 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Product} from "../types/product";
 import {ProductService} from "../product.service";
+import {Observable, of} from "rxjs";
 
 @Component({
   selector: 'app-pizza',
   templateUrl: './pizza.component.html',
   styleUrls: ['./pizza.component.scss']
 })
-export class PizzaComponent {
-  products: Product[] =  [];
+export class PizzaComponent implements OnInit{
+  products$: Observable<Product[]> =  of([]);
   selectedProduct: Product[] = [];
 
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
-    this.productService.getProducts().subscribe(
-      (data) => this.products = data.filter((p) => p.type === 'pizza')
-    );
+    this.products$ = this.productService.getProducts();
   }
 
   selectProduct(product: Product) {

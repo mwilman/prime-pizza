@@ -1,5 +1,5 @@
 <p-table
-  [value]="products" [tableStyle]="{'min-width': '50rem'}"
+  [value]="(products$ | async) || []" [tableStyle]="{'min-width': '50rem'}"
   selectionMode="single"
   [(selection)]="selectedProduct"
   dataKey="code"
@@ -18,7 +18,7 @@
       <td>{{product.identifier}}</td>
       <td>{{product.description}}</td>
       <td>{{product.price}}</td>
-      <td><app-button [clickHandler]="selectProduct(product)" label="Kaufen" icon="pi pi-search"></app-button></td>
+      <td><app-button (notify)="selectProduct(product)" label="Kaufen" icon="pi pi-search"></app-button></td>
     </tr>
   </ng-template>
 </p-table>
