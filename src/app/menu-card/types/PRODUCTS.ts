@@ -1,5 +1,5 @@
 import {Product} from "./product";
-export const products: Product[] = [
+export const PRODUCTS: Product[] = [
   {
     identifier: '1',
     description: 'Pizza Margeritha',

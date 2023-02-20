@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PizzaComponent } from './pizza/pizza.component';
 import {SharedModule} from "../shared/shared.module";
 import { LandingComponent } from './landing/landing.component';
+import {TableModule} from "primeng/table";
 
 
 
@@ -11,9 +12,10 @@ import { LandingComponent } from './landing/landing.component';
     PizzaComponent,
     LandingComponent
   ],
-  imports: [
-    CommonModule,
-    SharedModule
-  ]
+    imports: [
+        CommonModule,
+        SharedModule,
+        TableModule
+    ]
 })
 export class MenuCardModule { }
