@@ -1,3 +1,4 @@
+<ng-container *ngIf="cart.length; else empty">
 <p-table
   [value]="cart || []" [tableStyle]="{'min-width': '50rem'}"
   selectionMode="single"
@@ -20,3 +21,6 @@
     </tr>
   </ng-template>
 </p-table>
+</ng-container>
+
+<ng-template #empty><h1>No Items</h1></ng-template>
