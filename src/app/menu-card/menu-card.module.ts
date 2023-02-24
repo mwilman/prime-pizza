@@ -5,6 +5,7 @@ import {SharedModule} from "../shared/shared.module";
 import { LandingComponent } from './landing/landing.component';
 import {TableModule} from "primeng/table";
 import { PastaComponent } from './pasta/pasta.component';
+import { CartComponent } from './cart/cart.component';
 
 
 
@@ -12,7 +13,8 @@ import { PastaComponent } from './pasta/pasta.component';
   declarations: [
     PizzaComponent,
     LandingComponent,
-    PastaComponent
+    PastaComponent,
+    CartComponent
   ],
     imports: [
         CommonModule,

@@ -12,7 +12,8 @@ export class HeaderComponent {
     this.items = [
       {label: 'Home', icon: 'pi pi-fw pi-home', routerLink: 'home'},
       {label: 'Pizza', routerLink: 'pizza'},
-      {label: 'Pasta', routerLink: 'pasta'}
+      {label: 'Pasta', routerLink: 'pasta'},
+      {label: 'Cart', routerLink: 'cart'}
       /*
       {label: 'Calendar', icon: 'pi pi-fw pi-calendar'},
       {label: 'Edit', icon: 'pi pi-fw pi-pencil'},

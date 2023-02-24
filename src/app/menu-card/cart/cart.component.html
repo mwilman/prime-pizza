@@ -1,0 +1,22 @@
+<p-table
+  [value]="cart || []" [tableStyle]="{'min-width': '50rem'}"
+  selectionMode="single"
+  dataKey="code"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>#</th>
+      <th>Beschreibung</th>
+      <th>Preis</th>
+      <th>Anzahl</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-product>
+    <tr>
+      <td>{{product.identifier}}</td>
+      <td>{{product.description}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.counter}}</td>
+    </tr>
+  </ng-template>
+</p-table>
