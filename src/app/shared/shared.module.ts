@@ -6,6 +6,7 @@ import {FormsModule} from "@angular/forms";
 import {InputTextModule} from "primeng/inputtext";
 import {ButtonModule} from "primeng/button";
 import {RippleModule} from "primeng/ripple";
+import {RouterLink} from "@angular/router";
 
 
 
@@ -18,12 +19,13 @@ import {RippleModule} from "primeng/ripple";
     TextfieldComponent,
     ButtonComponent
   ],
-    imports: [
-        CommonModule,
-        FormsModule,
-        InputTextModule,
-        ButtonModule,
-        RippleModule
-    ]
+  imports: [
+    CommonModule,
+    FormsModule,
+    InputTextModule,
+    ButtonModule,
+    RippleModule,
+    RouterLink
+  ]
 })
 export class SharedModule { }
