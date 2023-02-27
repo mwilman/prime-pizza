@@ -8,6 +8,7 @@ import { PastaComponent } from './pasta/pasta.component';
 import { CartComponent } from './cart/cart.component';
 import {ButtonModule} from "primeng/button";
 import {RippleModule} from "primeng/ripple";
+import {RouterLink} from "@angular/router";
 
 
 
@@ -23,7 +24,8 @@ import {RippleModule} from "primeng/ripple";
     SharedModule,
     TableModule,
     ButtonModule,
-    RippleModule
+    RippleModule,
+    RouterLink
   ]
 })
 export class MenuCardModule { }
