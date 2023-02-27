@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {FooterComponent} from './footer/footer.component';
 import {HeaderComponent} from "./header/header.component";
 import {TabMenuModule} from "primeng/tabmenu";
+import {SharedModule} from "../shared/shared.module";
 
 
 @NgModule({
@@ -14,9 +15,10 @@ import {TabMenuModule} from "primeng/tabmenu";
     HeaderComponent,
     FooterComponent
   ],
-  imports: [
-    CommonModule,
-    TabMenuModule
-  ]
+    imports: [
+        CommonModule,
+        TabMenuModule,
+        SharedModule
+    ]
 })
 export class LayoutModule { }

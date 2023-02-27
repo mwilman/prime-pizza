@@ -9,4 +9,5 @@ export class ButtonComponent {
   @Input() label: string = "";
   @Output() notify = new EventEmitter();
   @Input() icon: string = "";
+  @Input() class: string = "";
 }
