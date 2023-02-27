@@ -6,6 +6,8 @@ import { LandingComponent } from './landing/landing.component';
 import {TableModule} from "primeng/table";
 import { PastaComponent } from './pasta/pasta.component';
 import { CartComponent } from './cart/cart.component';
+import {ButtonModule} from "primeng/button";
+import {RippleModule} from "primeng/ripple";
 
 
 
@@ -16,10 +18,12 @@ import { CartComponent } from './cart/cart.component';
     PastaComponent,
     CartComponent
   ],
-    imports: [
-        CommonModule,
-        SharedModule,
-        TableModule
-    ]
+  imports: [
+    CommonModule,
+    SharedModule,
+    TableModule,
+    ButtonModule,
+    RippleModule
+  ]
 })
 export class MenuCardModule { }
